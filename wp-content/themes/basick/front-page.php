@@ -1,16 +1,61 @@
 <?php get_header();?>
-
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h1><?php the_title();?></h1>
-            <?php if (have_posts()) : while(have_posts()) : the_post();?>
-
-                <?php the_content();?>
+<section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <?php the_field('recruitment'); ?>
+                        <div class="text-wrap">
+                            <?php the_field('recruitment2'); ?>
+                        </div>
+                        <button><?php the_field('recruitment_button'); ?></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col circles">
                 
-            <?php endwhile; endif;?>
-        </div>
-        <div class="col">Right</div>
+            </div>
+        </div> 
     </div>
-</div>
+</section>
+
+<section class="section bg-dark-green">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <?php the_field('process'); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col wheel">
+                
+            </div>
+        </div> 
+    </div>
+</section>
+
+<section class="section bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <?php the_field('team'); ?>
+                        <div class="text-wrap">
+                            <?php the_field('team2'); ?>
+                        </div>
+                        <button><?php the_field('team_button'); ?></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col peeps">
+                
+            </div>
+        </div> 
+    </div>
+</section>
+
 <?php get_footer();?>

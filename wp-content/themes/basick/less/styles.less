@@ -3,10 +3,156 @@ Theme Name: Basick
 Author: Dave Beckett
 */
 
-@width: 20px;
-@height: @width + 10px;
+// Layout
+@section-padding-top: 30px;
+@section-padding-bottom: @section-padding-top;
+@section-padding-gutter: 30px;
 
-#header {
-  width: @width;
-  height: @height;
+// Fonts Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@font-primary: 'Inter', sans-serif;
+
+h1, h2, h3, p, body {
+  font-family: @font-primary;
+}
+
+// Font sizes
+@fs-h1: 72px;
+@fs-h2: 52px;
+@fs-h3: 32px;
+@fs-body: 18px;
+@fs-button: @fs-body;
+
+// Color Palette 
+@color-white: #FFF;
+@color-pink: #ED1A76;
+@color-red: #C90E60;
+@color-purple: #BC219A;
+@color-dark-green: #22525E;
+@color-dark: #0E161C;
+@color-light: @color-white;
+
+// Linear pink to red
+.linear {
+  background: rgb(237,26,118);
+  background: linear-gradient(90deg, rgba(237,26,118,1) 0%, rgba(201,14,96,1) 100%);
+}
+
+// Inline color classes
+.bg-light { 
+  h1, h2, h3, p, body, li, a {
+    color: @color-dark;
+  }
+  background-color: @color-light;
+}
+.bg-dark-green { 
+  h1, h2, h3, p, body, li, a {
+    color: @color-white;
+  }
+  background-color: @color-dark-green;
+}
+.bg-dark { 
+  h1, h2, h3, p, body, li, a {
+    color: @color-white;
+  }
+  background-color: @color-dark;
+}
+
+// highlight text
+h1 strong, h2 strong, h3 strong, p strong {
+  color: @color-pink;
+}
+
+// Layout
+
+.section {
+  padding-top: @section-padding-top;
+  padding-bottom: @section-padding-bottom;
+  padding-left: @section-padding-gutter;
+  padding-right: @section-padding-gutter;
+}
+
+// Text Wrap cols
+.text-wrap {
+  column-count: 2;
+}
+
+// Useful
+.hide {
+  display: none;
+}
+
+// burger nav
+
+// Width variables (appears count calculates by raw css)
+@width1: 100%; // Appears 4 times
+
+// Height variables (appears count calculates by raw css)
+@height1: 2px; // Appears 3 times
+
+#burger {
+	display: block;
+	height: 16px;
+	opacity: 1;
+	position: absolute;
+	right: 19px;
+	top: 70px;
+	transition: 0.3s linear all;
+	width: 26px;
+	z-index: 200;
+	span {
+		background-color: @color-pink;
+		display: block;
+		height: @height1;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: 0.3s linear all;
+		width: @width1;
+		width: @width1;
+		&:before {
+			background-color: @color-pink;
+			content: "";
+			height: @height1;
+			position: absolute;
+			top: -7px;
+			transition: 0.3s linear all;
+			width: @width1;
+		}
+		&:after {
+			background-color: @color-pink;
+			content: "";
+			height: @height1;
+			position: absolute;
+			top: 7px;
+			transition: 0.3s linear all;
+			width: @width1;
+		}
+	}
+	&:hover {
+		cursor: pointer;
+		opacity: 1;
+		span {
+			background-color: @color-red;
+			&:before {
+				background-color: @color-red;
+				content: "";
+			}
+			&:after {
+				background-color: @color-red;
+				content: "";
+			}
+		}
+	}
+	&:focus {
+		color: @color-pink;
+		cursor: pointer;
+		outline: none;
+	}
+}
+
+.sticky-active {
+	#burger {
+		top: 31px;
+	}
 }

@@ -2,7 +2,137 @@
 Theme Name: Basick
 Author: Dave Beckett
 */
-#header {
-  width: 20px;
-  height: 30px;
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v11/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
+}
+h1,
+h2,
+h3,
+p,
+body {
+  font-family: 'Inter', sans-serif;
+}
+.linear {
+  background: #ed1a76;
+  background: linear-gradient(90deg, #ed1a76 0%, #c90e60 100%);
+}
+.bg-light {
+  background-color: #ffffff;
+}
+.bg-light h1,
+.bg-light h2,
+.bg-light h3,
+.bg-light p,
+.bg-light body,
+.bg-light li,
+.bg-light a {
+  color: #0e161c;
+}
+.bg-dark-green {
+  background-color: #22525e;
+}
+.bg-dark-green h1,
+.bg-dark-green h2,
+.bg-dark-green h3,
+.bg-dark-green p,
+.bg-dark-green body,
+.bg-dark-green li,
+.bg-dark-green a {
+  color: #ffffff;
+}
+.bg-dark {
+  background-color: #0e161c;
+}
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark p,
+.bg-dark body,
+.bg-dark li,
+.bg-dark a {
+  color: #ffffff;
+}
+h1 strong,
+h2 strong,
+h3 strong,
+p strong {
+  color: #ed1a76;
+}
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.text-wrap {
+  column-count: 2;
+}
+.hide {
+  display: none;
+}
+#burger {
+  display: block;
+  height: 16px;
+  opacity: 1;
+  position: absolute;
+  right: 19px;
+  top: 70px;
+  transition: 0.3s linear all;
+  width: 26px;
+  z-index: 200;
+}
+#burger span {
+  background-color: #ed1a76;
+  display: block;
+  height: 2px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s linear all;
+  width: 100%;
+}
+#burger span:before {
+  background-color: #ed1a76;
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: -7px;
+  transition: 0.3s linear all;
+  width: 100%;
+}
+#burger span:after {
+  background-color: #ed1a76;
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: 7px;
+  transition: 0.3s linear all;
+  width: 100%;
+}
+#burger:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+#burger:hover span {
+  background-color: #c90e60;
+}
+#burger:hover span:before {
+  background-color: #c90e60;
+  content: "";
+}
+#burger:hover span:after {
+  background-color: #c90e60;
+  content: "";
+}
+#burger:focus {
+  color: #ed1a76;
+  cursor: pointer;
+  outline: none;
+}
+.sticky-active #burger {
+  top: 31px;
 }
