@@ -63,6 +63,7 @@ p strong {
   color: #ed1a76;
 }
 .section {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
@@ -135,4 +136,139 @@ p strong {
 }
 .sticky-active #burger {
   top: 31px;
+}
+.circles div div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.circles div div.large-top {
+  bottom: 62px;
+  right: 54px;
+  z-index: 35;
+  width: 40%;
+  height: 50%;
+}
+.animate .circles div div.large-top {
+  animation: floattop 3.7s infinite;
+}
+.pause .circles div div.large-top {
+  animation-play-state: paused;
+}
+.circles div div.large-bottom {
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+  width: 40%;
+  height: 50%;
+}
+.animate .circles div div.large-bottom {
+  animation: floatbottom 3.5s infinite;
+  animation-play-state: running;
+}
+.pause .circles div div.large-bottom {
+  animation-play-state: paused;
+}
+.circles div div.medium-top {
+  top: 18%;
+  left: 30px;
+  z-index: 25;
+  width: 25%;
+  height: 30%;
+}
+.animate .circles div div.medium-top {
+  animation: floattop 3.7s infinite;
+}
+.pause .circles div div.medium-top {
+  animation-play-state: paused;
+}
+.circles div div.medium-bottom {
+  top: 28%;
+  left: 61px;
+  z-index: 20;
+  width: 25%;
+  height: 30%;
+}
+.animate .circles div div.medium-bottom {
+  animation: floatbottom 3.5s infinite;
+  animation-play-state: running;
+}
+.pause .circles div div.medium-bottom {
+  animation-play-state: paused;
+}
+.circles div div.small-top {
+  top: 0;
+  right: 170px;
+  z-index: 15;
+  width: 15%;
+  height: 20%;
+}
+.animate .circles div div.small-top {
+  animation: floattop 3.7s infinite;
+}
+.pause .circles div div.small-top {
+  animation-play-state: paused;
+}
+.circles div div.small-bottom {
+  top: 25px;
+  right: 148px;
+  z-index: 10;
+  width: 15%;
+  height: 20%;
+}
+.animate .circles div div.small-bottom {
+  animation: floatbottom 3.5s infinite;
+  animation-play-state: running;
+}
+.pause .circles div div.small-bottom {
+  animation-play-state: paused;
+}
+@keyframes floattop {
+  50% {
+    transform: translateY(0px);
+    transform: translateX(5px);
+  }
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+@keyframes floatbottom {
+  50% {
+    transform: translateY(0);
+    transform: translateX(10px);
+  }
+}
+.bg {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wheel-desktop {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.wheel-mobile {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+.desktop-only {
+  display: none;
+}
+@media (min-width: 992px) {
+  .desktop-only {
+    display: block;
+  }
+}
+.mobile-only {
+  display: block;
+}
+@media (min-width: 992px) {
+  .mobile-only {
+    display: none;
+  }
 }
