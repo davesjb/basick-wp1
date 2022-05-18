@@ -15,15 +15,15 @@
                 </div>
             </div>
             <div class="circles col-lg-6">
-                <div class="large-wrapper">
+                <div class="circle large-wrapper">
                     <div class="bg large-top" style="background-image: url(<?php bloginfo('template_url') ?>/images/circles/top.svg )"></div>
                     <div class="bg large-bottom" style="background-image: url(<?php bloginfo('template_url') ?>/images/circles/bottom.svg )"></div>
                 </div>
-                <div class="medium-wrapper">
+                <div class="circle medium-wrapper">
                     <div class="bg medium-top" style="background-image: url(<?php bloginfo('template_url') ?>/images/circles/top.svg )"></div>
                     <div class="bg medium-bottom" style="background-image: url(<?php bloginfo('template_url') ?>/images/circles/bottom.svg )"></div>
                 </div>
-                <div class="small-wrapper">
+                <div class="circle small-wrapper">
                     <div class="bg small-top" style="background-image: url(<?php bloginfo('template_url') ?>/images/circles/top.svg )"></div>
                     <div class="bg small-bottom" style="background-image: url(<?php bloginfo('template_url') ?>/images/circles/bottom.svg )"></div>
                 </div>

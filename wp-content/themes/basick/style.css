@@ -137,30 +137,56 @@ p strong {
 .sticky-active #burger {
   top: 31px;
 }
+.circle {
+  position: absolute;
+}
+.large-wrapper {
+  bottom: 62px;
+  right: 54px;
+  max-width: 376px;
+  max-height: 376px;
+  background-color: #b3d1ebad;
+}
+.medium-wrapper {
+  top: 7%;
+  left: 9px;
+  width: 142px;
+  height: 142px;
+  background-color: #b3d1ebad;
+  transform: rotate(180deg);
+}
+.small-wrapper {
+  top: 0;
+  right: 170px;
+  width: 84px;
+  height: 84px;
+  background-color: #b3d1ebad;
+}
 .circles div div {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 .circles div div.large-top {
-  bottom: 62px;
-  right: 54px;
+  top: -40px;
+  left: -32px;
   z-index: 35;
-  width: 40%;
-  height: 50%;
 }
 .animate .circles div div.large-top {
-  animation: floattop 3.7s infinite;
+  top: -10px;
+  left: 6px;
+  transition: all 2s ease 0s ;
+  animation: infinite;
 }
 .pause .circles div div.large-top {
   animation-play-state: paused;
 }
 .circles div div.large-bottom {
-  bottom: 0;
-  right: 0;
+  bottom: -65px;
+  right: -59px;
   z-index: 30;
-  width: 40%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
 .animate .circles div div.large-bottom {
   animation: floatbottom 3.5s infinite;
@@ -170,11 +196,9 @@ p strong {
   animation-play-state: paused;
 }
 .circles div div.medium-top {
-  top: 18%;
-  left: 30px;
+  top: -20%;
+  left: -15px;
   z-index: 25;
-  width: 25%;
-  height: 30%;
 }
 .animate .circles div div.medium-top {
   animation: floattop 3.7s infinite;
@@ -183,11 +207,9 @@ p strong {
   animation-play-state: paused;
 }
 .circles div div.medium-bottom {
-  top: 28%;
-  left: 61px;
+  top: 7%;
+  left: 9px;
   z-index: 20;
-  width: 25%;
-  height: 30%;
 }
 .animate .circles div div.medium-bottom {
   animation: floatbottom 3.5s infinite;
@@ -197,11 +219,9 @@ p strong {
   animation-play-state: paused;
 }
 .circles div div.small-top {
-  top: 0;
-  right: 170px;
+  top: -13px;
+  right: 14px;
   z-index: 15;
-  width: 15%;
-  height: 20%;
 }
 .animate .circles div div.small-top {
   animation: floattop 3.7s infinite;
@@ -210,11 +230,9 @@ p strong {
   animation-play-state: paused;
 }
 .circles div div.small-bottom {
-  top: 25px;
-  right: 148px;
+  top: 15px;
+  right: -9px;
   z-index: 10;
-  width: 15%;
-  height: 20%;
 }
 .animate .circles div div.small-bottom {
   animation: floatbottom 3.5s infinite;
