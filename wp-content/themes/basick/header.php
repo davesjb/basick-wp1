@@ -9,14 +9,16 @@
 </head>
 <body <?php body_class();?>>
 <header>
-    <div id="menu" class="hide">
-        <?php wp_nav_menu (
-            array(
-                'theme_location' => 'top-menu',
-            )
-            );?>
+    <div class="container">
+        <div id="menu" class="hide">
+            <?php wp_nav_menu (
+                array(
+                    'theme_location' => 'top-menu',
+                )
+                );?>
+        </div>
+        <div id="burger-menu"><span></span></div>
+        <a href="#" id="logo"></a>
     </div>
-    <div id="burger-menu"><span></span></div>
-    <div id="logo"></div>
 </header> 
     

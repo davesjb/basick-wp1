@@ -1,3 +1,26 @@
+button,
+.button {
+  color: @color-white;
+  @radius: 30px;
+  width: 100%;
+  max-width: 170px;
+  height: 50px;
+  font-size: @fs-button;
+  border: 1px solid transparent;
+  border-top-left-radius: @radius;
+  border-bottom-left-radius: @radius;
+  border-top-right-radius: @radius;
+  border-bottom-right-radius: @radius;
+  background: rgb(237, 26, 118);
+  background: linear-gradient(
+    90deg,
+    rgba(237, 26, 118, 1) 0%,
+    rgba(201, 14, 96, 1) 100%
+  );
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .wheel-desktop {
   width: 50%;
   height: 100%;

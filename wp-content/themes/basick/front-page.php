@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 desktop-only">
                 <div class="circles-container">
                     <div class="circle large-wrapper">
                         <div class="bg large-top" style="background-image: url(<?php bloginfo('template_url') ?>/images/circles/top.svg )"></div>

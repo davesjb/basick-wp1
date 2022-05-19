@@ -1,5 +1,22 @@
-// Layout
+// Base font
+h1,
+h2,
+h3,
+p,
+body {
+  font-family: @font-primary;
+}
 
+// Hyperlinks
+a {
+  text-decoration: none;
+  transition: 0.3s ease-out all;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Layout styles
 .section {
   position: relative;
   padding-top: @section-padding-top;
@@ -17,7 +34,13 @@
 
 // Text Wrap cols
 .text-wrap {
-  column-count: 2;
+  @media (min-width: 992px) {
+    column-count: 2;
+    p:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
 }
 
 // Useful
