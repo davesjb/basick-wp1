@@ -66,8 +66,17 @@
                     </div>
                 </div>
             </div>
-            <div class="peeps col-md-6">
-                
+            <div class="peeps-section col-md-6">
+                <div class="peeps">
+                    <div class="bg team" style="background-image: url(<?php bloginfo('template_url') ?>/images/peeps/1.png )"></div>
+                    <div class="bg team" style="background-image: url(<?php bloginfo('template_url') ?>/images/peeps/2.png )"></div>
+                    <div class="bg team" style="background-image: url(<?php bloginfo('template_url') ?>/images/peeps/3.png )"></div>
+                    <div class="bg team" style="background-image: url(<?php bloginfo('template_url') ?>/images/peeps/4.png )"></div>
+                    <div class="bg team" style="background-image: url(<?php bloginfo('template_url') ?>/images/peeps/5.png )"></div>
+                    <div class="bg team" style="background-image: url(<?php bloginfo('template_url') ?>/images/peeps/6.png )"></div>
+                    <div class="bg team" style="background-image: url(<?php bloginfo('template_url') ?>/images/peeps/7.png )"></div>
+                    <div class="bg team" style="background-image: url(<?php bloginfo('template_url') ?>/images/peeps/8.png )"></div>
+                </div>
             </div>
         </div> 
     </div>
