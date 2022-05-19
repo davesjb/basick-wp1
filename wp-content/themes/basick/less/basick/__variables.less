@@ -1,0 +1,93 @@
+// Layout
+@section-padding-top: 30px;
+@section-padding-bottom: @section-padding-top;
+@section-padding-gutter: 30px;
+
+// Fonts Inter
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@font-primary: "Inter", sans-serif;
+
+h1,
+h2,
+h3,
+p,
+body {
+  font-family: @font-primary;
+}
+
+// Font sizes
+@fs-h1: 72px;
+@fs-h2: 52px;
+@fs-h3: 32px;
+@fs-body: 18px;
+@fs-button: @fs-body;
+
+// Color Palette
+@color-white: #fff;
+@color-pink: #ed1a76;
+@color-red: #c90e60;
+@color-purple: #bc219a;
+@color-dark-green: #22525e;
+@color-dark: #0e161c;
+@color-light: @color-white;
+
+// Linear pink to red
+.linear {
+  background: rgb(237, 26, 118);
+  background: linear-gradient(
+    90deg,
+    rgba(237, 26, 118, 1) 0%,
+    rgba(201, 14, 96, 1) 100%
+  );
+}
+
+// Inline color classes
+.bg-light {
+  h1,
+  h2,
+  h3,
+  p,
+  body,
+  li,
+  a {
+    color: @color-dark;
+  }
+
+  background-color: @color-light;
+}
+
+.bg-dark-green {
+  h1,
+  h2,
+  h3,
+  p,
+  body,
+  li,
+  a {
+    color: @color-white;
+  }
+
+  background-color: @color-dark-green;
+}
+
+.bg-dark {
+  h1,
+  h2,
+  h3,
+  p,
+  body,
+  li,
+  a {
+    color: @color-white;
+  }
+
+  background-color: @color-dark;
+}
+
+// highlight text
+h1 strong,
+h2 strong,
+h3 strong,
+p strong {
+  color: @color-pink;
+}

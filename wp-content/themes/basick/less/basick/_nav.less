@@ -1,0 +1,83 @@
+// burger nav
+
+// Width variables (appears count calculates by raw css)
+@width1: 100%; // Appears 4 times
+
+// Height variables (appears count calculates by raw css)
+@height1: 2px; // Appears 3 times
+
+#burger {
+  display: block;
+  height: 16px;
+  opacity: 1;
+  position: absolute;
+  right: 19px;
+  top: 70px;
+  transition: 0.3s linear all;
+  width: 26px;
+  z-index: 200;
+
+  span {
+    background-color: @color-pink;
+    display: block;
+    height: @height1;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s linear all;
+    width: @width1;
+    width: @width1;
+
+    &:before {
+      background-color: @color-pink;
+      content: "";
+      height: @height1;
+      position: absolute;
+      top: -7px;
+      transition: 0.3s linear all;
+      width: @width1;
+    }
+
+    &:after {
+      background-color: @color-pink;
+      content: "";
+      height: @height1;
+      position: absolute;
+      top: 7px;
+      transition: 0.3s linear all;
+      width: @width1;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+
+    span {
+      background-color: @color-red;
+
+      &:before {
+        background-color: @color-red;
+        content: "";
+      }
+
+      &:after {
+        background-color: @color-red;
+        content: "";
+      }
+    }
+  }
+
+  &:focus {
+    color: @color-pink;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+// Nav
+.sticky-active {
+  #burger {
+    top: 31px;
+  }
+}

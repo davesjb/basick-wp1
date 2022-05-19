@@ -1,0 +1,42 @@
+// Layout
+
+.section {
+  position: relative;
+  padding-top: @section-padding-top;
+  padding-bottom: @section-padding-bottom;
+  padding-left: @section-padding-gutter;
+  padding-right: @section-padding-gutter;
+}
+
+// Backgrounds
+.bg {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Text Wrap cols
+.text-wrap {
+  column-count: 2;
+}
+
+// Useful
+.hide {
+  display: none;
+}
+
+.desktop-only {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+  }
+}
+
+.mobile-only {
+  display: block;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}

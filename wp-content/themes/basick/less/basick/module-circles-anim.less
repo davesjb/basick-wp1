@@ -1,0 +1,167 @@
+// Circles
+
+@large-wrapper: 50%;
+@medium-wrapper: 20%;
+@small-wrapper: 12%;
+// @large-wrapper: 376px;
+// @medium-wrapper: 142px;
+// @small-wrapper: 84px;
+
+.circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #abb0b4;
+
+  &.large-wrapper {
+    // transform: rotate(180deg);
+    bottom: 62px;
+    right: 54px;
+    max-width: @large-wrapper;
+    max-height: @large-wrapper;
+    background-color: #b3d1ebad;
+  }
+
+  &.medium-wrapper {
+    top: 7%;
+    left: 9px;
+    width: @medium-wrapper;
+    height: @medium-wrapper;
+    background-color: #b3d1ebad;
+    transform: rotate(90deg);
+  }
+
+  &.small-wrapper {
+    top: 0;
+    right: 170px;
+    width: @small-wrapper;
+    height: @small-wrapper;
+    background-color: #b3d1ebad;
+    // transform: rotate(180deg);
+  }
+}
+.circles-container {
+  width: 48.4vw;
+  height: 100%;
+  min-height: 37vw;
+  position: absolute;
+  left: 0;
+  background-color: #abb0b4;
+  position: relative;
+
+  div div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    &.large-top {
+      top: -69px;
+      left: -62px;
+      z-index: 35;
+
+      .animate & {
+        animation: floattop 3.7s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+
+    &.large-bottom {
+      bottom: -65px;
+      right: -59px;
+
+      // bottom: -6px;
+      // right: -13px;
+      z-index: 30;
+      width: 100%;
+      height: 100%;
+
+      .animate & {
+        animation: floatbottom 3.5s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+
+    &.medium-top {
+      top: -20%;
+      left: -15px;
+      // top: 8%;
+      // left: 8px;
+      z-index: 25;
+
+      .animate & {
+        animation: floattop 3.7s infinite;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+
+    &.medium-bottom {
+      top: 17%;
+      left: 29px;
+      z-index: 20;
+
+      .animate & {
+        animation: floatbottom 3.5s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+
+    &.small-top {
+      top: 0;
+      right: 14px;
+      z-index: 15;
+
+      .animate & {
+        animation: floattop 3.7s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+
+    &.small-bottom {
+      top: 29px;
+      right: -11px;
+      z-index: 10;
+
+      .animate & {
+        animation: floatbottom 3.5s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@keyframes floattop {
+  50% {
+    transform: translateY(-2px);
+    transform: translateX(-4px);
+  }
+}
+
+@keyframes floatbottom {
+  50% {
+    transform: translateY(2px);
+    transform: translateX(4px);
+  }
+}
