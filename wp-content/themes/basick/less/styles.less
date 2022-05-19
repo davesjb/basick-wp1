@@ -9,10 +9,14 @@ Author: Dave Beckett
 @section-padding-gutter: 30px;
 
 // Fonts Inter
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@font-primary: 'Inter', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@font-primary: "Inter", sans-serif;
 
-h1, h2, h3, p, body {
+h1,
+h2,
+h3,
+p,
+body {
   font-family: @font-primary;
 }
 
@@ -23,43 +27,73 @@ h1, h2, h3, p, body {
 @fs-body: 18px;
 @fs-button: @fs-body;
 
-// Color Palette 
-@color-white: #FFF;
-@color-pink: #ED1A76;
-@color-red: #C90E60;
-@color-purple: #BC219A;
-@color-dark-green: #22525E;
-@color-dark: #0E161C;
+// Color Palette
+@color-white: #fff;
+@color-pink: #ed1a76;
+@color-red: #c90e60;
+@color-purple: #bc219a;
+@color-dark-green: #22525e;
+@color-dark: #0e161c;
 @color-light: @color-white;
 
 // Linear pink to red
 .linear {
-  background: rgb(237,26,118);
-  background: linear-gradient(90deg, rgba(237,26,118,1) 0%, rgba(201,14,96,1) 100%);
+  background: rgb(237, 26, 118);
+  background: linear-gradient(
+    90deg,
+    rgba(237, 26, 118, 1) 0%,
+    rgba(201, 14, 96, 1) 100%
+  );
 }
 
 // Inline color classes
-.bg-light { 
-  h1, h2, h3, p, body, li, a {
+.bg-light {
+  h1,
+  h2,
+  h3,
+  p,
+  body,
+  li,
+  a {
     color: @color-dark;
   }
+
   background-color: @color-light;
 }
-.bg-dark-green { 
-  h1, h2, h3, p, body, li, a {
+
+.bg-dark-green {
+  h1,
+  h2,
+  h3,
+  p,
+  body,
+  li,
+  a {
     color: @color-white;
   }
+
   background-color: @color-dark-green;
 }
-.bg-dark { 
-  h1, h2, h3, p, body, li, a {
+
+.bg-dark {
+  h1,
+  h2,
+  h3,
+  p,
+  body,
+  li,
+  a {
     color: @color-white;
   }
+
   background-color: @color-dark;
 }
 
 // highlight text
-h1 strong, h2 strong, h3 strong, p strong {
+h1 strong,
+h2 strong,
+h3 strong,
+p strong {
   color: @color-pink;
 }
 
@@ -72,9 +106,6 @@ h1 strong, h2 strong, h3 strong, p strong {
   padding-left: @section-padding-gutter;
   padding-right: @section-padding-gutter;
 }
-
-// grid
-
 
 // Text Wrap cols
 .text-wrap {
@@ -95,219 +126,253 @@ h1 strong, h2 strong, h3 strong, p strong {
 @height1: 2px; // Appears 3 times
 
 #burger {
-	display: block;
-	height: 16px;
-	opacity: 1;
-	position: absolute;
-	right: 19px;
-	top: 70px;
-	transition: 0.3s linear all;
-	width: 26px;
-	z-index: 200;
-	span {
-		background-color: @color-pink;
-		display: block;
-		height: @height1;
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-		transition: 0.3s linear all;
-		width: @width1;
-		width: @width1;
-		&:before {
-			background-color: @color-pink;
-			content: "";
-			height: @height1;
-			position: absolute;
-			top: -7px;
-			transition: 0.3s linear all;
-			width: @width1;
-		}
-		&:after {
-			background-color: @color-pink;
-			content: "";
-			height: @height1;
-			position: absolute;
-			top: 7px;
-			transition: 0.3s linear all;
-			width: @width1;
-		}
-	}
-	&:hover {
-		cursor: pointer;
-		opacity: 1;
-		span {
-			background-color: @color-red;
-			&:before {
-				background-color: @color-red;
-				content: "";
-			}
-			&:after {
-				background-color: @color-red;
-				content: "";
-			}
-		}
-	}
-	&:focus {
-		color: @color-pink;
-		cursor: pointer;
-		outline: none;
-	}
+  display: block;
+  height: 16px;
+  opacity: 1;
+  position: absolute;
+  right: 19px;
+  top: 70px;
+  transition: 0.3s linear all;
+  width: 26px;
+  z-index: 200;
+
+  span {
+    background-color: @color-pink;
+    display: block;
+    height: @height1;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s linear all;
+    width: @width1;
+    width: @width1;
+
+    &:before {
+      background-color: @color-pink;
+      content: "";
+      height: @height1;
+      position: absolute;
+      top: -7px;
+      transition: 0.3s linear all;
+      width: @width1;
+    }
+
+    &:after {
+      background-color: @color-pink;
+      content: "";
+      height: @height1;
+      position: absolute;
+      top: 7px;
+      transition: 0.3s linear all;
+      width: @width1;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+
+    span {
+      background-color: @color-red;
+
+      &:before {
+        background-color: @color-red;
+        content: "";
+      }
+
+      &:after {
+        background-color: @color-red;
+        content: "";
+      }
+    }
+  }
+
+  &:focus {
+    color: @color-pink;
+    cursor: pointer;
+    outline: none;
+  }
 }
 
 // Nav
 .sticky-active {
-	#burger {
-		top: 31px;
-	}
+  #burger {
+    top: 31px;
+  }
 }
 
 // Circles
+
+@large-wrapper: 50%;
+@medium-wrapper: 20%;
+@small-wrapper: 12%;
+// @large-wrapper: 376px;
+// @medium-wrapper: 142px;
+// @small-wrapper: 84px;
+
 .circle {
-  position: absolute;
-}
-@large-wrapper: 376px;
-@medium-wrapper: 142px;
-@small-wrapper: 84px;
-
-.large-wrapper {
-  // transform: rotate(180deg);
-  bottom: 62px;
-  right: 54px;
-  max-width: @large-wrapper;
-  max-height: @large-wrapper;
-  background-color: #b3d1ebad;
-  
-}
-.medium-wrapper {
-  top: 7%;
-  left: 9px;
-  width: @medium-wrapper;
-  height: @medium-wrapper;
-  background-color: #b3d1ebad;
-  transform: rotate(180deg);
-}
-.small-wrapper {
-  top: 0;
-  right: 170px;
-  width: @small-wrapper;
-  height: @small-wrapper;
-  background-color: #b3d1ebad;
-  // transform: rotate(180deg);
-}
-
-.circles div div {
   width: 100%;
   height: 100%;
   position: absolute;
+  background-color: #abb0b4;
 
-  &.large-top {
-    top: -40px;
-    left: -32px;
-    z-index: 35;
-    .animate &{
-      top: -10px;
-      left: 6px;
-      transition: all 2s ease 0s ;
-      animation: infinite;
-    }
-    .pause &{
-      animation-play-state: paused;
-    }
+  &.large-wrapper {
+    // transform: rotate(180deg);
+    bottom: 62px;
+    right: 54px;
+    max-width: @large-wrapper;
+    max-height: @large-wrapper;
+    background-color: #b3d1ebad;
   }
 
-  &.large-bottom {
-    bottom: -65px;
-    right: -59px;
-
-    // bottom: -6px;
-    // right: -13px;
-    z-index: 30;
-    width: 100%;
-    height: 100%;
-    .animate &{
-      animation: floatbottom 3.5s infinite;
-      animation-play-state: running;
-    }
-    .pause &{
-      animation-play-state: paused;
-    }
-  }
-
-  &.medium-top {
-    top: -20%;
-    left: -15px;
-    // top: 8%;
-    // left: 8px;
-    z-index: 25;
-    .animate &{
-      animation: floattop 3.7s infinite;
-    }
-    .pause &{
-      animation-play-state: paused;
-    }
-  }
-
-  &.medium-bottom {
+  &.medium-wrapper {
     top: 7%;
     left: 9px;
-    z-index: 20;
-    .animate &{
-      animation: floatbottom 3.5s infinite;
-      animation-play-state: running;
-    }
-    .pause &{
-      animation-play-state: paused;
-    }
+    width: @medium-wrapper;
+    height: @medium-wrapper;
+    background-color: #b3d1ebad;
+    transform: rotate(90deg);
   }
 
-  &.small-top {
-    top: -13px;
-    right: 14px;
-    z-index: 15;
-    .animate &{
-      animation: floattop 3.7s infinite;
-    }
-    .pause &{
-      animation-play-state: paused;
-    }
+  &.small-wrapper {
+    top: 0;
+    right: 170px;
+    width: @small-wrapper;
+    height: @small-wrapper;
+    background-color: #b3d1ebad;
+    // transform: rotate(180deg);
   }
-  
-  &.small-bottom {
-    top: 15px;
-    right: -9px;
-    z-index: 10;
-    .animate &{
-      animation: floatbottom 3.5s infinite;
-      animation-play-state: running;
+}
+.circles-container {
+  width: 48.4vw;
+  height: 100%;
+  min-height: 37vw;
+  position: absolute;
+  left: 0;
+  background-color: #abb0b4;
+  position: relative;
+
+  div div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    &.large-top {
+      top: -69px;
+      left: -62px;
+      z-index: 35;
+
+      .animate & {
+        animation: floattop 3.7s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
     }
-    .pause &{
-      animation-play-state: paused;
+
+    &.large-bottom {
+      bottom: -65px;
+      right: -59px;
+
+      // bottom: -6px;
+      // right: -13px;
+      z-index: 30;
+      width: 100%;
+      height: 100%;
+
+      .animate & {
+        animation: floatbottom 3.5s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+
+    &.medium-top {
+      top: -20%;
+      left: -15px;
+      // top: 8%;
+      // left: 8px;
+      z-index: 25;
+
+      .animate & {
+        animation: floattop 3.7s infinite;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+
+    &.medium-bottom {
+      top: 17%;
+      left: 29px;
+      z-index: 20;
+
+      .animate & {
+        animation: floatbottom 3.5s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+
+    &.small-top {
+      top: 0;
+      right: 14px;
+      z-index: 15;
+
+      .animate & {
+        animation: floattop 3.7s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
+    }
+
+    &.small-bottom {
+      top: 29px;
+      right: -11px;
+      z-index: 10;
+
+      .animate & {
+        animation: floatbottom 3.5s infinite;
+        animation-play-state: running;
+      }
+
+      .pause & {
+        animation-play-state: paused;
+      }
     }
   }
 }
 
 @keyframes floattop {
-  50%{
-    transform: translateY(0px);
-    transform: translateX(5px);
-  }
-  0%, 100% {
-    transform: rotate(-4deg)
+  50% {
+    transform: translateY(-2px);
+    transform: translateX(-4px);
   }
 }
 
 @keyframes floatbottom {
-  50%{
-    transform: translateY(0);
-    transform: translateX(10px);
+  50% {
+    transform: translateY(2px);
+    transform: translateX(4px);
   }
 }
 
 // Backgrounds
 .bg {
   background-position: 50% 50%;
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -327,15 +392,16 @@ h1 strong, h2 strong, h3 strong, p strong {
 
 .desktop-only {
   display: none;
-  @media (min-width: 992px){
+
+  @media (min-width: 992px) {
     display: block;
   }
 }
 
 .mobile-only {
   display: block;
-  @media (min-width: 992px){
+
+  @media (min-width: 992px) {
     display: none;
   }
 }
-
